@@ -1,75 +1,14 @@
 # HangMan Project
 
 import random
-word_list=["naruto", "hamburger", "brush"]
-hangman_stages =hangman_stages = [
-    """
-     +---+
-     |   |
-     O   |
-    /|\\  |
-    / \\  |
-         |
-    =========
-    """,
-    """
-     +---+
-     |   |
-     O   |
-    /|\\  |
-    /    |
-         |
-    =========
-    """,
-    """
-     +---+
-     |   |
-     O   |
-    /|\\  |
-         |
-         |
-    =========
-    """,
-    """
-     +---+
-     |   |
-     O   |
-    /|   |
-         |
-         |
-    =========
-    """,
-    """
-     +---+
-     |   |
-     O   |
-     |   |
-         |
-         |
-    =========
-    """,
-    """
-     +---+
-     |   |
-     O   |
-         |
-         |
-         |
-    =========
-    """,
-    """
-     +---+
-     |   |
-         |
-         |
-         |
-         |
-    =========
-    """
-]
+import words_module
+import hangmanart_module
 
+word_list=words_module.words
+hangman_stages=hangmanart_module.hangman_stages
 
 choosen_word=random.choice(word_list)
+print(hangmanart_module.hangman_logo)
 print(f"the solution is {choosen_word}")
 
 display=[]
